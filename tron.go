@@ -271,3 +271,19 @@ func (t *Client) AccountBalance(address string) (*Account, error) {
 	return &account, nil
 
 }
+
+func (t Client) GetBlockByLimitNext(start, end int64) (*api.BlockListExtention, error) {
+	acc, err := t.conn.GetBlockByLimitNext(start, end)
+	if err != nil {
+		return nil, err
+	}
+	return acc, nil
+}
+
+func (t Client) GetBlockByLatestNum(num int64) (*api.BlockListExtention, error) {
+	acc, err := t.conn.GetBlockByLatestNum(num)
+	if err != nil {
+		return nil, err
+	}
+	return acc, nil
+}
