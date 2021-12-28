@@ -4,7 +4,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/medeirosfalante/tron-sdk"
+	tron "github.com/medeirosfalante/tron-sdk"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 )
